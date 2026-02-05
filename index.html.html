@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day, My Love ❤️</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ffe6f2, #ffb3ba, #ffffff);
+            color: #333;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Heart Particles Background */
+        .heart-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .heart {
+            position: absolute;
+            color: #ff69b4;
+            font-size: 20px;
+            animation: float 6s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(135deg, #ff69b4, #ffb3ba);
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #hero h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        #hero p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+
+        #hero button {
+            background: #ff1493;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        #hero button:hover {
+            background: #ff69b4;
+        }
+
+        /* About Her */
+        #about {
+            background: #ffffff;
+        }
+
+        #about h2 {
+            color: #ff69b4;
+            font-size: 2rem;
+        }
+
+        #about p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* Memories */
+        #memories {
+            background: #ffe6f2;
+        }
+
+        #memories h2 {
+            color: #ff1493;
+            font-size: 2rem;
+        }
+
+        .memory {
+            display: inline-block;
+            margin: 20px;
+            width: 200px;
+        }
+
+        .memory img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .memory p {
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+
+        /* Love Message */
+        #message {
+            background: #ffffff;
+        }
+
+        #message h2 {
+            color: #ff69b4;
+            font-size: 2rem;
+        }
+
+        #message p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Why I Love You */
+        #why {
+            background: #ffb3ba;
+        }
+
+        #why h2 {
+            color: #ffffff;
+            font-size: 2rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            display: inline-block;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Promise */
+        #promise {
+            background: #ffffff;
+        }
+
+        #promise h2 {
+            color: #ff69b4;
+            font-size: 2rem;
+        }
+
+        #promise p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Final Surprise */
+        #surprise {
+            background: linear-gradient(135deg, #ff69b4, #ffb3ba);
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #surprise h2 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        #surprise .buttons {
+            margin-top: 40px;
+        }
+
+        #surprise button {
+            background: #ff1493;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        #surprise button:hover {
+            background: #ff69b4;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            #hero h1 { font-size: 2rem; }
+            #hero p { font-size: 1.2rem; }
+            .memory { width: 150px; }
+            .card { width: 200px; }
+            #surprise h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Heart Particles -->
+    <div class="heart-particles" id="particles"></div>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Happy Valentine’s Day My Love Ankita ❤️</h1>
+        <p>Tum meri life ka sabse beautiful hissa ho.</p>
+        <button onclick="scrollToNext()">Read My Heart</button>
+    </section>
+
+    <!-- About Her -->
+    <section id="about">
+        <h2>About You</h2>
+        <p>Tumhari smile meri weakness hai.<br>
+        Tumhari awaaz meri peace.<br>
+        Tumhari presence meri strength.<br>
+        Thank you meri life mein aane ke liye.</p>
+    </section>
+
+    <!-- Our Memories -->
+    <section id="memories">
+        <h2>Our Memories</h2>
+        <div class="memory">
+            <img src="https://in.pinterest.com/geethagurusamyg/cute-couples/" alt="First Meet">
+            <p>Forever moments 💕</p>
+        </div>
+        <div class="memory">
+            <img src="placeholder2.jpg" alt="Favorite Moment">
+            <p>Forever moments 💕</p>
+        </div>
+        <div class="memory">
+            <img src="placeholder3.jpg" alt="Best Memory">
+            <p>Forever moments 💕</p>
+        </div>
+    </section>
+
+    <!-- Love Message -->
+    <section id="message">
+        <h2>Love Message</h2>
+        <p>Main perfect nahi hoon,<br>
+        par tumse sach mein bohot pyaar karta hoon.<br>
+        Har mushkil mein tumhara saath chahta hoon.<br>
+        Promise karta hoon hamesha respect aur care dunga.<br>
+        You are my today and all my tomorrows.</p>
+    </section>
+
+    <!-- Why I Love You -->
+    <section id="why">
+        <h2>Why I Love You</h2>
+        <div class="card">Tum samajhti ho mujhe</div>
+        <div class="card">Tum motivate karti ho</div>
+        <div class="card">Tum meri peace ho</div>
+        <div class="card">Tum meri jaan ho</div>
+    </section>
+
+    <!-- Promise -->
+    <section id="promise">
+        <h2>Promise</h2>
+        <p>I promise to stand by you,<br>
+        protect your smile,<br>
+        support your dreams,<br>
+        and love you endlessly.</p>
+    </section>
+
+    <!-- Final Surprise -->
+    <section id="surprise">
+        <h2>Will You Be My Valentine? ❤️</h2>
+        <div class="buttons">
+            <button>Yes 💖</button>
+            <button>Always Yours 💕</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Made with ❤️ just for you <br> by Mittal raj</p>
+    </footer>
+
+    <!-- Background Music -->
+    <audio autoplay loop>
+        <source src="romantic-instrumental.mp3" type="audio/mpeg">
+        <!-- Use a free romantic instrumental like "Canon in D" or similar from a public domain source -->
+    </audio>
+
+    <script>
+        // Intersection Observer for Fade Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Scroll to Next Section
+        function scrollToNext() {
+            document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Heart Particles Animation
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 3 + 's';
+            document.getElementById('particles').appendChild(heart);
+            setTimeout(() => heart.remove(), 6000);
+        }
+
+        setInterval(createHeart, 500);
+    </script>
+</body>
+</html>
